@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char s[20],s1[20];
+	int i,j,size;
+	printf("Enter a string ");
+	gets(s);
+	strcpy(s1,s);
+	size=strlen(s);
+	i=0; j=size-1;
+	while(i<(size/2))
+	{
+		char temp;
+		temp=s[i]; 
+		s[i]= s[j];   
+		s[j]=temp;  
+		i++;
+		j--;
+	}
+	if(strcmp(s1,s)==0)
+	printf("stringpalindrome");
+	else
+	printf("not a string palindrome");
+	
+}
